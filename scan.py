@@ -29,4 +29,4 @@ def scan_dir(directory: str, log: bool = False):
             pass
 
 
-scan_dir("")
+scan_dir("/")
