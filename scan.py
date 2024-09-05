@@ -8,7 +8,7 @@ f = open("out.txt", "w")
 
 
 def print(msg: Any = "", end="\n"):
-    log(msg + end)
+    log(msg, end=end)
     f.write(msg + end)
 
 
