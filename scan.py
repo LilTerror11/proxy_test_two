@@ -19,7 +19,7 @@ def scan_dir(directory: str, log: bool = False):
         elif path.is_file():
             if log:
                 print(f"{directory}/{path.name}")
-            dict_path = str(f"{directory}/{path.name}").split("/")
+            dict_path = str(f"{directory}/{path.name}")
             dict_path = dict_path.replace("/", "\"][\"")
             exec(f"path[\"{dict_path}\"] = image")
         else:
