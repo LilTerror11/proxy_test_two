@@ -3,6 +3,13 @@ from typing import Any
 
 Assets = {}
 
+f = open("out.txt", "w")
+
+
+def print(msg: Any = "", end="\n"):
+    f.write(msg + end)
+
+
 def scan_dir(directory: str, loops=0):
     scanned = os.scandir(directory)
     help_me = []
