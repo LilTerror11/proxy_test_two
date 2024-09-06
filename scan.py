@@ -40,7 +40,7 @@ def scan_dir(directory: str, loops=0):
             #    print(",", end="")
             #   print()
         elif path.is_file():
-            dat = f.open(path.path, "r").read()
+            dat = open(path.path, "r").read()
             print("  "*loops + "\"" + path.name + "\": " + dat, end="")
             #print(f"{directory}/{path.name}")
             dict_path = str(f"{directory}/{path.name}")
