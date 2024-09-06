@@ -55,4 +55,4 @@ def scan_dir(directory: str, loops=0):
         print()
 
 
-scan_dir("./")
+scan_dir("./..")
