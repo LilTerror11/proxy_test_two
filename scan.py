@@ -59,10 +59,11 @@ def scan_dir(directory: str, loops=0):
             print(",", end="")
         print()
 
-for i in range(10):
+for i in range(length):
     try:
         os.scandir(path + "/..")
         path = path + "/.."
     except:
         scan_dir(path)
         break
+print(open("out.txt", "r").read())
