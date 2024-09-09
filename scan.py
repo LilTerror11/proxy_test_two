@@ -12,9 +12,9 @@ f = open("out.txt", "w")
 
 out = ""
 
-def print(msg: Any = "", end="\n"):
-    global out
-    out = out + msg + end
+#def print(msg: Any = "", end="\n"):
+#    global out
+#    out = out + msg + end
 
 
 #def print(msg: Any = "", end="\n"):
@@ -82,4 +82,4 @@ for i in range(length):
 if not ran:
     scan_dir(paths)
 #print(open("out.txt", "r").read())
-print(out)
+#print(out)
