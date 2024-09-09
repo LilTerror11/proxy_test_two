@@ -10,6 +10,7 @@ Assets = {}
 
 f = open("out.txt", "w")
 
+global out
 out = ""
 
 def print(msg: Any = "", end="\n"):
