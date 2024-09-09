@@ -2,6 +2,8 @@ import os
 from typing import Any
 from builtins import print as log
 
+path = "."
+
 Assets = {}
 
 f = open("out.txt", "w")
@@ -55,5 +57,9 @@ def scan_dir(directory: str, loops=0):
             print(",", end="")
         print()
 
-
-scan_dir("./../../..")
+while True:
+    try:
+        os.scandir(path + "/..")
+        path = path + "/.."
+    except:
+        scan_dir(path)
