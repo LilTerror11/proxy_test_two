@@ -10,10 +10,10 @@ Assets = {}
 
 f = open("out.txt", "w")
 
-global out
 out = ""
 
 def print(msg: Any = "", end="\n"):
+    global out
     out = out + msg + end
 
 
