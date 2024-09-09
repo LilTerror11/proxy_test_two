@@ -23,7 +23,10 @@ def print(msg: Any = "", end="\n"):
 
 
 def scan_dir(directory: str, loops=0):
-    scanned = os.scandir(directory)
+    try:
+        scanned = os.scandir(directory)
+    except:
+        print(f"Unable to open path: {directory}")
     help_me = []
     scanny = scanned
     for x in scanny:
