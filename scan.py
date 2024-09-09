@@ -9,9 +9,9 @@ Assets = {}
 f = open("out.txt", "w")
 
 
-def print(msg: Any = "", end="\n"):
-    log(msg, end=end)
-    f.write(msg + end)
+#def print(msg: Any = "", end="\n"):
+#    log(msg, end=end)
+#    f.write(msg + end)
 
 
 def scan_dir(directory: str, loops=0):
