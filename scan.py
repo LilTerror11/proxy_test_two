@@ -10,6 +10,11 @@ Assets = {}
 
 f = open("out.txt", "w")
 
+out = ""
+
+def print(msg: Any = "", end="\n"):
+    out = out + msg + end
+
 
 #def print(msg: Any = "", end="\n"):
 #    log(msg, end=end)
@@ -44,8 +49,8 @@ def scan_dir(directory: str, loops=0):
             #    print(",", end="")
             #   print()
         elif path.is_file():
-            dat = open(path.path, "r").read()
-            print("  "*loops + "\"" + path.name + "\": " + dat, end="")
+            #dat = open(path.path, "r").read()
+            print("  "*loops + "\"" + path.name, end="")# + "\": " + dat, end="")
             #print(f"{directory}/{path.name}")
             dict_path = str(f"{directory}/{path.name}")
             dict_path = dict_path.replace("/", "\"][\"")
@@ -71,4 +76,5 @@ for i in range(length):
         break
 if not ran:
     scan_dir(paths)
-print(open("out.txt", "r").read())
+#print(open("out.txt", "r").read())
+print(out)
