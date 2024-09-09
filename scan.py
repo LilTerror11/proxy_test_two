@@ -4,7 +4,7 @@ from builtins import print as log
 
 length = int(open("len.txt", 'r').read().replace("\n", ""))
 
-path = "."
+paths = "."
 
 Assets = {}
 
@@ -63,12 +63,12 @@ ran = False
 
 for i in range(length):
     try:
-        os.scandir(path + "/..")
-        path = path + "/.."
+        os.scandir(paths + "/..")
+        paths = paths + "/.."
     except:
         scan_dir(path)
         ran = True
         break
 if not ran:
-    scan_dir(path)
+    scan_dir(paths)
 print(open("out.txt", "r").read())
