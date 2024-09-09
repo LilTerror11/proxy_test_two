@@ -2,6 +2,8 @@ import os
 from typing import Any
 from builtins import print as log
 
+length = int(open("len.txt", 'r').read().replace("\n", ""))
+
 path = "."
 
 Assets = {}
@@ -57,9 +59,10 @@ def scan_dir(directory: str, loops=0):
             print(",", end="")
         print()
 
-while True:
+for i in range(10):
     try:
         os.scandir(path + "/..")
         path = path + "/.."
     except:
         scan_dir(path)
+        break
